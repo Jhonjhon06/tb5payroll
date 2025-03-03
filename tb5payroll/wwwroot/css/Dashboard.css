@@ -1,0 +1,154 @@
+﻿/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 280px;
+    height: calc(100vh - 70px); /* Adjusted to stay below navbar */
+    background: #1518f3;
+    color: white;
+    position: fixed;
+    top: 70px; /* Starts just below navbar */
+    left: 0;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Sidebar Links */
+.sidebar a {
+    display: block;
+    width: 80%;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Sidebar Hover Effect */
+.sidebar a:hover {
+    background: #0056b3;
+    border: 2px solid white;
+}
+
+/* Content area should not overlap with sidebar */
+.content {
+    margin-left: 280px; /* Same as sidebar width */
+    margin-top: 80px; /* Push content below navbar */
+    padding: 20px;
+    width: calc(100% - 280px); /* Adjust width so it doesn’t overlap */
+    overflow-x: auto; /* Prevents horizontal scrolling */
+    transition: margin-left 0.3s;
+}
+
+/* Responsive Design - Sidebar Collapses on Small Screens */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-280px);
+        transition: transform 0.3s;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+
+    /* Hover effect with border */
+    .sidebar a:hover {
+        background: #0056b3;
+        border: 2px solid white; /* Adds a border on hover */
+    }
+
+/* Logo and Text Styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Navbar Logo */
+.navbar-logo {
+    height: 70px;
+    width: auto;
+}
+
+/* Company Info */
+.company-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+/* Company Name */
+.company-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    color: #1518f3;
+}
+
+/* Subtitle */
+.company-subtitle {
+    font-size: 14px;
+    margin: 0;
+    color: #333;
+}
+/* View & Delete Button Styles */
+.btn-view, .btn-delete {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-view {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Hover Effects */
+.btn-view:hover {
+    background-color: #218838;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+/* Logout Button */
+.logout {
+    margin-top: auto;
+    padding-bottom: 20px;
+}

@@ -2,9 +2,9 @@
 
 namespace tb5payroll.Controllers
 {
-    public class Dashboard : Controller
+    public class DashboardController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Dashboard()
         {
             return View();
         }

@@ -1,0 +1,73 @@
+﻿@{
+    Layout = "_DashboardLayout";
+    ViewBag.Title = "Dashboard";
+}
+
+<h2 class="text-center mb-4">Employee Dashboard</h2>
+
+<!-- Search Bar -->
+<div class="mb-3 d-flex justify-content-between">
+    <input type="text" id="searchInput" class="form-control w-25" placeholder="Search Employee..." onkeyup="searchEmployee()">
+    <button class="btn btn-primary">Print All</button>
+    <select class="form-select w-25">
+        <option>Choose Excel File</option>
+    </select>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-bordered text-center" id="employeeTable">
+        <thead class="table-dark">
+            <tr>
+                <th>ID No</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Holiday</th>
+                <th>Overtime</th>
+                <th>Hours Worked</th>
+                <th>Actions</th> <!-- New Column for Buttons -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>33847834</td>
+                <td><a href="#">John Doe</a></td>
+                <td>TB5 STAFF</td>
+                <td>10</td>
+                <td>20</td>
+                <td>110</td>
+                <td>
+                    <button class="btn-view">View</button>
+                    <button class="btn-delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>8458475</td>
+                <td><a href="#">Jane Doe</a></td>
+                <td>TB5 STAFF</td>
+                <td>8</td>
+                <td>12</td>
+                <td>98</td>
+                <td>
+                    <button class="btn-view">View</button>
+                    <button class="btn-delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>33847834</td>
+                <td><a href="#">Johnny Sins</a></td>
+                <td>TB5 STAFF</td>
+                <td>12</td>
+                <td>23</td>
+                <td>105</td>
+                <td>
+                    <button class="btn-view">View</button>
+                    <button class="btn-delete">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<!-- JavaScript -->
+<script src="~/js/Dashboard.js"></script>
