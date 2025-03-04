@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #f8f9fa;
+    background-color: lightgray;
     padding: 10px 20px;
     height: 70px;
     width: 100%;
@@ -51,13 +51,15 @@
 
 /* Content area should not overlap with sidebar */
 .content {
-    margin-left: 280px; /* Same as sidebar width */
-    margin-top: 80px; /* Push content below navbar */
+    position: absolute;
+    top: 70px; /* Start immediately after navbar */
+    left: 280px;
+    right: 0;
+    bottom: 0;
     padding: 20px;
-    width: calc(100% - 280px); /* Adjust width so it doesn’t overlap */
-    overflow-x: auto; /* Prevents horizontal scrolling */
-    transition: margin-left 0.3s;
+    overflow-x: auto;
 }
+
 
 /* Responsive Design - Sidebar Collapses on Small Screens */
 @media (max-width: 768px) {
