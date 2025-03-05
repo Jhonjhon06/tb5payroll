@@ -14,6 +14,7 @@
     </select>
 </div>
 
+
 <!-- Employee Table -->
 <div class="table-responsive">
     <table class="table table-bordered text-center" id="employeeTable">
@@ -31,7 +32,7 @@
         <tbody>
             <tr>
                 <td>33847834</td>
-                <td><a href="#">John Doe</a></td>
+                <td><a>John Doe</a></td>
                 <td>TB5 STAFF</td>
                 <td>10</td>
                 <td>20</td>
@@ -43,7 +44,7 @@
             </tr>
             <tr>
                 <td>433834</td>
-                <td><a href="#">Jane Doe</a></td>
+                <td><a">Jane Doe</a></td>
                 <td>TB5 STAFF</td>
                 <td>12</td>
                 <td>20</td>
@@ -55,7 +56,7 @@
             </tr>
             <tr>
                 <td>2277834</td>
-                <td><a href="#">Johnny Sins</a></td>
+                <td><a>Johnny Sins</a></td>
                 <td>TB5 STAFF</td>
                 <td>13</td>
                 <td>22</td>
@@ -71,7 +72,7 @@
 
 <!-- 1st Cutoff Modal -->
 <div class="modal fade" id="payslipModal" tabindex="-1" aria-labelledby="payslipModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="payslipTitle">Payslip - Semi-Monthly Payroll (1st Cut-off: 1st - 15th)</h5>
@@ -135,6 +136,7 @@
                             <td><span id="payslipOthers">0.00</span></td>
                         </tr>
                     </tbody>
+
                 </table>
 
                 <div>
@@ -155,7 +157,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" id="nextCutoff">Next</button>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-               <button type="button" class="btn btn-primary" onclick="printPayslip('payslipModal')">Print</button>
+                <button type="button" class="btn btn-primary btn-print" data-modal="payslipModal">Print</button>
 
 
             </div>
@@ -164,9 +166,11 @@
 </div>
 
 <!-- 2nd Cutoff Modal -->
+<!-- 2nd Cutoff Modal -->
 <div class="modal fade" id="payslipModalSecond" tabindex="-1" aria-labelledby="payslipModalSecondLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
+
             <div class="modal-header">
                 <h5 class="modal-title" id="payslipTitleSecond">Payslip - Semi-Monthly Payroll (2nd Cut-off: 16th - 30th/31st)</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -188,47 +192,49 @@
                     <tbody>
                         <tr>
                             <td>Regular</td>
-                            <td><span id="payslipMinutes2">62.50</span></td>
+                            <td><span id="payslipMinutes">62.50</span></td>
                             <td>0.00</td>
                             <td>W/H Tax</td>
-                            <td><span id="payslipTax2">0.00</span></td>
+                            <td><span id="payslipTax">0.00</span></td>
                         </tr>
                         <tr>
                             <td>Training</td>
-                            <td><span id="payslipTrainingMinutes2">1000.00</span></td>
+                            <td><span id="payslipTrainingMinutes">1000.00</span></td>
                             <td>0.00</td>
                             <td>SSS</td>
-                            <td><span id="payslipSSS2">0.00</span></td>
+                            <td><span id="payslipSSS">0.00</span></td>
                         </tr>
                         <tr>
-                            <td></td>
+                            <td>TRAINING DETAILS</td>
                             <td></td>
                             <td></td>
                             <td>PAG-IBIG</td>
-                            <td><span id="payslipPagIbig2">0.00</span></td>
+                            <td><span id="payslipPagIbig">0.00</span></td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td><span id="payslipBatch">-</span></td>
+                            <td><span id="payslipDays">-</span></td>
+                            <td><span id="payslipTrainingDates">-</span></td>
                             <td>Tardiness</td>
-                            <td><span id="payslipTardiness2">0.00</span></td>
+                            <td><span id="payslipTardiness">0.00</span></td>
                         </tr>
+
                         <tr>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td>Loan</td>
-                            <td><span id="payslipLoan2">0.00</span></td>
+                            <td><span id="payslipLoan">0.00</span></td>
                         </tr>
                         <tr>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td>Others/CA</td>
-                            <td><span id="payslipOthers2">0.00</span></td>
+                            <td><span id="payslipOthers">0.00</span></td>
                         </tr>
                     </tbody>
+
                 </table>
 
                 <div>

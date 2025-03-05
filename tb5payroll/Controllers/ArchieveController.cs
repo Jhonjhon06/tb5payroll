@@ -2,12 +2,11 @@
 
 namespace tb5payroll.Controllers
 {
-    public class DashboardController : Controller
+    public class ArchieveController : Controller
     {
-        public IActionResult Dashboard()
+        public IActionResult Archieve()
         {
             return View();
         }
-
     }
 }

@@ -1,78 +1,135 @@
-﻿* {
-    font-family: Arial;
-    box-sizing: border-box;
-    margin: 0;
+﻿/* Global Layout */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-
-body {
-    height: 100vh;
+/* Left Side */
+.left-side {
+    width: 50%;
+    background-color: #E5E5E5;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-main {
-    height: 100vh;
-}
-
-*.footer {
-    position: absolute;
-
-    bottom: 0;
-    width: 100%;
-    white-space: nowrap;
-    line-height: 60px;
-}*
-
-
-h5 {
-    color: #1518f3;
-}
-
-
-.right-col {
-    background-color: #1518f3;
-}
-
-h1, h5 {
-    word-spacing: 5px;
-    font-weight: 600;
-    color: #1518f3;
-    margin-top 200;
-}
-
-h1 {
-    font-size: 50px;
-}
-
-span {
-    color: #1518f3;
-    font-weight: 600;
-    font-size: 20px;
-}
-
-i {
+/* Right Side */
+.right-side {
+    width: 50%;
+    background-color: #1518F3;
     color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.login-btn {
-    width: 200px;
+/* Logo Styling */
+.main-logo {
+    height: 300px; /* Adjust as needed */
+    margin-bottom: 10px; /* Ensures spacing */
 }
 
-.login-input {
-    width: 350px;
+.company-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1518F3;
+    margin-top: 5px;
+    text-align: center;
 }
 
-.input-icon {
-    position: relative;
+.company-subtitle {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-    .input-icon i {
-        position: absolute;
-        left: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        color: blue;
+/* TESDA Section */
+.tesda-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.tesda-logo {
+    height: 80px; /* Adjusted for balance */
+    margin-right: 10px; /* Creates spacing between logo and text */
+}
+
+.tesda-text-container {
+    display: flex;
+    flex-direction: row; /* Makes the text align horizontally */
+    gap: 5px; /* Adds a little space between words */
+    font-size: 1.3rem; /* Slightly larger text */
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* Payroll Icon */
+.payroll-header {
+    margin-bottom: 0;
+}
+
+.payroll-icon {
+    height: 200px; /* Reduced size */
+    display: block;
+    margin: 0 auto 10px;
+    filter: brightness(0) invert(1);
+}
+
+/* Login Form */
+.login-container {
+    width: 85%;
+    max-width: 350px;
+    padding: 20px;
+}
+
+.input-group {
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+    .input-group i {
+        font-size: 1.2rem;
+        color: #333;
     }
 
-    .input-icon input {
-        padding-left: 30px; * Space for the icon *
+    .input-group input {
+        border: none;
+        font-size: 1rem;
+        padding: 10px;
+        width: 100%;
+        background: transparent;
+        outline: none;
+        color: black;
+    }
+
+.btn-light {
+    width: 100%;
+    background-color: white;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    .btn-light:hover {
+        background-color: #ddd;
     }

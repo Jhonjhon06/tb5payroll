@@ -2,12 +2,11 @@
 
 namespace tb5payroll.Controllers
 {
-    public class DashboardController : Controller
+    public class ContributionController : Controller
     {
-        public IActionResult Dashboard()
+        public IActionResult Contribution()
         {
             return View();
         }
-
     }
 }
