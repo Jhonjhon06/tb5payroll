@@ -4,6 +4,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    height: 200px; /* Adjust as needed to prevent overlapping */
 }
 
 /* Left Side */
@@ -15,6 +17,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden; /* Ensures anything overflowing is not visible */
 }
 
 /* Right Side */
@@ -31,22 +35,35 @@
 
 /* Logo Styling */
 .main-logo {
-    height: 300px; /* Adjust as needed */
-    margin-bottom: 10px; /* Ensures spacing */
+    display: block;
+    margin: 0 auto;
+    width: auto; /* Allow natural scaling */
+    max-width: 800px; /* Increase size, adjust as needed */
+    height: 800px; /* Keep it large without affecting the text */
 }
-
+.big-logo {
+    position: absolute;
+    width: 200%;
+    height: auto;
+    opacity: 0.1; /* Adjust for visibility */
+    z-index: 0;
+    left: 85%; /* Moves it 3/4 to the right */
+    transform: translateX(-50%); /* Centers the image at the new position */
+    max-width: none;
+    overflow: hidden;
+}
 .company-name {
     font-size: 2rem;
     font-weight: bold;
     color: #1518F3;
-    margin-top: 5px;
+    margin-top: 10px; /* Keeps space between logo and text */
     text-align: center;
 }
 
 .company-subtitle {
     font-size: 1.1rem;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 /* TESDA Section */
@@ -54,7 +71,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    margin-top:50px;
     flex-wrap: wrap; /* Ensures responsiveness */
 }
 
