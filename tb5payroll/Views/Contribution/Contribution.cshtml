@@ -1,4 +1,36 @@
 ﻿@{
-    Layout = "_ContributionLayout";
-    ViewBag.Title = "Dashboard";
+	Layout = "_ContributionLayout";
+	ViewBag.Title = "Dashboard";
 }
+<h2>Contributions</h2>
+<div class="mb-3 d-flex justify-content-between">
+	<input type="text" id="searchInput" class="form-control w-25" placeholder="Search Employee..." onkeyup="searchEmployee()">
+</div>
+<body>
+	<div class="container">
+		<div class="input-group">
+			<label for="wh-tax">W/H TAX:</label>
+			<input type="text" id="wh-tax" placeholder="%/FLAT RATE">
+		</div>
+		<div class="input-group">
+			<label for="pag-ibig">PAG-IBIG:</label>
+			<input type="text" id="pag-ibig" placeholder="%/FLAT RATE">
+		</div>
+		<div class="input-group">
+			<label for="sss">SSS:</label>
+			<input type="text" id="sss" placeholder="%/FLAT RATE">
+		</div>
+		<div class="input-group">
+			<label for="tardiness">TARDINESS:</label>
+			<input type="text" id="tardiness" placeholder="%/FLAT RATE">
+		</div>
+		<div class="input-group">
+			<label for="loan">LOAN:</label>
+			<input type="text" id="loan" placeholder="%/FLAT RATE">
+		</div>
+		<div class="input-group">
+			<label for="others">OTHERS/CA:</label>
+			<input type="text" id="others" placeholder="%/FLAT RATE">
+		</div>
+	</div>
+</body>

@@ -1,63 +1,62 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@ViewBag.Title</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/3f0b7d830d.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="~/css/Contribution.css"> <!-- External CSS -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>@ViewBag.Title</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/3f0b7d830d.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="~/css/Contribution.css"> <!-- External CSS -->
 </head>
 <body>
-    <div class="d-flex">
-        <!-- Sidebar -->
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <a href="@Url.Action("Dashboard", "Dashboard")"><i class="fas fa-tachometer-alt"></i> DASHBOARD</a>
-            <a href="@Url.Action("Contribution", "Contribution")"><i class="fas fa-hand-holding-usd"></i> CONTRIBUTION</a>
-            <a href="@Url.Action("Archieve", "Archieve")"><i class="fas fa-archive"></i> ARCHIVE</a>
-            <a href="@Url.Action("Logout", "Account")" class="logout">
-                <i class="fas fa-sign-out-alt"></i> LOG-OUT
-            </a>
-        </div>
+	<div class="d-flex">
+		<div class="sidebar">
+			<a href="@Url.Action("Dashboard", "Dashboard")"><i class="fas fa-tachometer-alt"></i> DASHBOARD</a>
+			<a href="@Url.Action("Contribution", "Contribution")"><i class="fas fa-hand-holding-usd"></i> CONTRIBUTION</a>
+			<a href="@Url.Action("Archieve", "Archieve")"><i class="fas fa-archive"></i> ARCHIVE</a>
+			<a href="@Url.Action("Logout", "Account")" class="logout">
+				<i class="fas fa-sign-out-alt"></i> LOG-OUT
+			</a>
+		</div>
+
+		<div class="w-100">
+			<!-- Navbar -->
+			<div class="navbar d-flex align-items-center justify-content-between">
+				<div class="d-flex align-items-center">
 
 
-        <div class="w-100">
-            <!-- Navbar -->
-            <div class="navbar d-flex align-items-center justify-content-between">
-                <div class="d-flex align-items-center">
-                    <span class="menu-toggle me-3" onclick="toggleSidebar()">
-                        <i class="fas fa-bars"></i>
-                    </span>
+					<!-- Logo and Company Info -->
+					<div class="logo-container d-flex align-items-center">
+						<img src="~/assets/mainlogo.png" alt="Logo" class="navbar-logo me-2">
+						<div class="company-info">
+							<h2 class="company-name">THE BIG FIVE</h2>
+							<h3 class="company-subtitle">Training and Assessment Center Inc.</h3>
+						</div>
+						<img src="~/assets/th__1_-removebg-preview.png" alt="Tesda Logo" class="navbar-logo ms-2">
+					</div>
+				</div>
 
-                    <!-- Logo and Company Info -->
-                    <div class="logo-container d-flex align-items-center">
-                        <img src="~/assets/Untitled_design__3_-removebg-preview.png" alt="Logo" class="navbar-logo me-2">
-                        <div class="company-info">
-                            <h2 class="company-name">THE BIG FIVE</h2>
-                            <h3 class="company-subtitle">Training and Assessment Center Inc.</h3>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Admin Info -->
-                <div class="user-info d-flex align-items-center">
-                    <i class="fas fa-user-circle me-2"></i>
-                    <span>Welcome, Admin</span>
-                </div>
-            </div>
 
-            <!-- Page Content -->
-            <div class="content p-3">
-                @RenderBody()
-            </div>
-        </div>
-    </div>
 
-    <!-- JavaScript -->
-    <script src="~/js/Contribution.js"></script>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+				<!-- Admin Info -->
+				<div class="user-info d-flex align-items-center">
+					<i class="fas fa-user-circle me-2"></i>
+					<span>Welcome, Admin</span>
+				</div>
+			</div>
+
+			<!-- Page Content -->
+			<div class="content p-3">
+				@RenderBody()
+			</div>
+		</div>
+	</div>
+
+	<!-- JavaScript -->
+	<script src="~/js/Dashboard.js"></script>
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Bootstrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

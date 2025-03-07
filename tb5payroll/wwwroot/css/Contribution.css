@@ -1,11 +1,12 @@
-﻿/* Navbar */
+﻿
+/* Navbar */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: lightgray;
     padding: 10px 20px;
-    height: 70px;
+    height: 80px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -13,15 +14,14 @@
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 /* Sidebar */
 .sidebar {
     width: 280px;
-    height: calc(100vh - 70px); /* Adjusted to stay below navbar */
+    height: calc(100vh - 80px); /* Adjusted to stay below navbar */
     background: #1518f3;
     color: white;
     position: fixed;
-    top: 70px; /* Starts just below navbar */
+    top: 80px; /* Starts just below navbar */
     left: 0;
     padding-top: 20px;
     display: flex;
@@ -48,6 +48,19 @@
             background: #0056b3;
             border: 2px solid white;
         }
+
+/* Content area should not overlap with sidebar */
+.content {
+    position: absolute;
+    top: 70px; /* Start immediately after navbar */
+    left: 280px;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+
 /* Responsive Design - Sidebar Collapses on Small Screens */
 @media (max-width: 768px) {
     .sidebar {
@@ -65,12 +78,60 @@
     }
 }
 
+.container {
+    background: lightblue;
+    padding: 10px;
+    border-radius: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    text-align: center;
+    border: 2px solid #007bff;
+}
 
+h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 6px;
+    background: #f8f9fa;
+    border-radius: 0;
+    border: 2px solid #ddd;
+}
+
+label {
+    font-weight: bold;
+    font-size: 12px;
+    color: #555;
+}
+
+input {
+    width: 130px;
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 0;
+    outline: none;
+    font-size: 12px;
+    background: #fff;
+}
+
+    input:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    }
 /* Hover effect with border */
 .sidebar a:hover {
     background: #0056b3;
     border: 2px solid white; /* Adds a border on hover */
 }
+
 
 /* Logo and Text Styling */
 .logo-container {
@@ -80,7 +141,7 @@
 
 /* Navbar Logo */
 .navbar-logo {
-    height: 70px;
+    height: 65px;
     width: auto;
 }
 
@@ -105,7 +166,6 @@
     margin: 0;
     color: #333;
 }
-
 /* Logout Button */
 .logout {
     margin-top: auto;

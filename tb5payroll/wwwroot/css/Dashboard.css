@@ -1,11 +1,12 @@
-﻿/* Navbar */
+﻿
+/* Navbar */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: lightgray;
     padding: 10px 20px;
-    height: 70px;
+    height: 80px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -13,15 +14,14 @@
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 /* Sidebar */
 .sidebar {
     width: 280px;
-    height: calc(100vh - 70px); /* Adjusted to stay below navbar */
+    height: calc(100vh - 80px); /* Adjusted to stay below navbar */
     background: #1518f3;
     color: white;
     position: fixed;
-    top: 70px; /* Starts just below navbar */
+    top: 80px; /* Starts just below navbar */
     left: 0;
     padding-top: 20px;
     display: flex;
@@ -29,25 +29,25 @@
     align-items: center;
 }
 
-/* Sidebar Links */
-.sidebar a {
-    display: block;
-    width: 80%;
-    text-align: center;
-    padding: 15px;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-}
+    /* Sidebar Links */
+    .sidebar a {
+        display: block;
+        width: 80%;
+        text-align: center;
+        padding: 15px;
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 8px;
+        transition: all 0.3s ease-in-out;
+    }
 
-/* Sidebar Hover Effect */
-.sidebar a:hover {
-    background: #0056b3;
-    border: 2px solid white;
-}
+        /* Sidebar Hover Effect */
+        .sidebar a:hover {
+            background: #0056b3;
+            border: 2px solid white;
+        }
 
 /* Content area should not overlap with sidebar */
 .content {
@@ -56,11 +56,29 @@
     left: 280px;
     right: 0;
     bottom: 0;
-    padding: 20px;
+    padding: 10px;
     overflow-x: auto;
 }
 
+thead th {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: skyblue; /* Ensures it doesn't become transparent */
+}
 
+.table-responsive {
+    max-height: 350px;
+    overflow: auto;
+}
+
+thead, tbody, tr, td, th {
+    display: block;
+}
+
+thead {
+    width: 100%;
+}
 
 /* Responsive Design - Sidebar Collapses on Small Screens */
 @media (max-width: 768px) {
@@ -69,9 +87,9 @@
         transition: transform 0.3s;
     }
 
-    .sidebar.active {
-        transform: translateX(0);
-    }
+        .sidebar.active {
+            transform: translateX(0);
+        }
 
     .content {
         margin-left: 0;
@@ -80,11 +98,12 @@
 }
 
 
-    /* Hover effect with border */
-    .sidebar a:hover {
-        background: #0056b3;
-        border: 2px solid white; /* Adds a border on hover */
-    }
+/* Hover effect with border */
+.sidebar a:hover {
+    background: #0056b3;
+    border: 2px solid white; /* Adds a border on hover */
+}
+
 
 /* Logo and Text Styling */
 .logo-container {
@@ -94,7 +113,7 @@
 
 /* Navbar Logo */
 .navbar-logo {
-    height: 70px;
+    height: 65px;
     width: auto;
 }
 
@@ -119,6 +138,7 @@
     margin: 0;
     color: #333;
 }
+
 /* View & Delete Button Styles */
 .btn-view, .btn-delete {
     display: inline-flex;
@@ -153,7 +173,7 @@
 /* Modal */
 @media (min-width: 768px) {
     .modal-dialog {
-        max-width: 90%; 
+        max-width: 90%;
     }
 }
 
@@ -162,4 +182,3 @@
     margin-top: auto;
     padding-bottom: 20px;
 }
-

@@ -1,11 +1,12 @@
-﻿/* Navbar */
+﻿
+/* Navbar */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: lightgray;
     padding: 10px 20px;
-    height: 70px;
+    height: 80px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -13,15 +14,14 @@
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 /* Sidebar */
 .sidebar {
     width: 280px;
-    height: calc(100vh - 70px); /* Adjusted to stay below navbar */
+    height: calc(100vh - 80px); /* Adjusted to stay below navbar */
     background: #1518f3;
     color: white;
     position: fixed;
-    top: 70px; /* Starts just below navbar */
+    top: 80px; /* Starts just below navbar */
     left: 0;
     padding-top: 20px;
     display: flex;
@@ -48,6 +48,43 @@
             background: #0056b3;
             border: 2px solid white;
         }
+
+    /* Content area should not overlap with sidebar */
+    .content {
+        position: absolute;
+        top: 70px; /* Start immediately after navbar */
+        left: 280px;
+        right: 0;
+        bottom: 0;
+        padding: 20px;
+        overflow-x: auto;
+    }
+#searchInput {
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+/* Filter Dropdowns */
+#monthFilter, #yearFilter {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    display: inline-block;
+    margin-right:5px;
+}
+.filter-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns to the left */
+    margin-right:5px;
+}
+#monthFilter, #yearFilter {
+    float: none;
+    position: static;
+}
+
 /* Responsive Design - Sidebar Collapses on Small Screens */
 @media (max-width: 768px) {
     .sidebar {
@@ -72,6 +109,7 @@
     border: 2px solid white; /* Adds a border on hover */
 }
 
+
 /* Logo and Text Styling */
 .logo-container {
     display: flex;
@@ -80,7 +118,7 @@
 
 /* Navbar Logo */
 .navbar-logo {
-    height: 70px;
+    height: 65px;
     width: auto;
 }
 
