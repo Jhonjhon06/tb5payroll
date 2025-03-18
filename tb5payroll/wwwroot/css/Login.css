@@ -45,7 +45,7 @@
     position: absolute;
     width: 200%;
     height: auto;
-    opacity: 0.1; /* Adjust for visibility */
+    opacity: 0.2; /* Adjust for visibility */
     z-index: 0;
     left: 85%; /* Moves it 3/4 to the right */
     transform: translateX(-50%); /* Centers the image at the new position */

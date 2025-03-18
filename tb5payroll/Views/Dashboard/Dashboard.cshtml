@@ -24,13 +24,13 @@
 	<table class="table table-sm table-bordered text-center" id="employeeTable" style="margin-bottom: 0; font-size: 17px;">
 		<thead class="table-dark" style="background-color: skyblue;">
 			<tr>
-				<th style="position: sticky; top: 0; z-index: 2; background: skyblue;">ID No</th>
-				<th style="position: sticky; top: 0; z-index: 2; background: skyblue;">Name</th>
-				<th style="position: sticky; top: 0; z-index: 2; background: skyblue;">Department</th>
-				<th style="position: sticky; top: 0; z-index: 2; background: skyblue;">Holiday</th>
-				<th style="position: sticky; top: 0; z-index: 2; background: skyblue;">Overtime</th>
-				<th style="position: sticky; top: 0; z-index: 2; background: skyblue;">Hours Worked</th>
-				<th style="position: sticky; top: 0; z-index: 2; background: skyblue;">Actions</th>
+				<th style="z-index: 2; background: skyblue;">ID No</th>
+				<th style="z-index: 2; background: skyblue;">Name</th>
+				<th style="z-index: 2; background: skyblue;">Department</th>
+				<th style="z-index: 2; background: skyblue;">Holiday</th>
+				<th style="z-index: 2; background: skyblue;">Overtime</th>
+				<th style="z-index: 2; background: skyblue;">Hours Worked</th>
+				<th style="z-index: 2; background: skyblue;">Actions</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -48,7 +48,7 @@
 			</tr>
 			<tr>
 				<td>433834</td>
-				<td><a">Jane Doe</a></td>
+				<td><a>Jane Doe</a></td>
 				<td>TB5 STAFF</td>
 				<td>12</td>
 				<td>20</td>
@@ -84,7 +84,7 @@
 			</tr>
 			<tr>
 				<td>433834</td>
-				<td><a">Jane Doe</a></td>
+				<td><a>Jane Doe</a></td>
 				<td>TB5 STAFF</td>
 				<td>12</td>
 				<td>20</td>
@@ -120,7 +120,7 @@
 			</tr>
 			<tr>
 				<td>433834</td>
-				<td><a">Jane Doe</a></td>
+				<td><a>Jane Doe</a></td>
 				<td>TB5 STAFF</td>
 				<td>12</td>
 				<td>20</td>
@@ -156,7 +156,7 @@
 			</tr>
 			<tr>
 				<td>433834</td>
-				<td><a">Jane Doe</a></td>
+				<td><a>Jane Doe</a></td>
 				<td>TB5 STAFF</td>
 				<td>12</td>
 				<td>20</td>
@@ -377,9 +377,12 @@
 		const rowsPerPage = 7;
 		const table = document.getElementById("employeeTable");
 		const tbody = table.querySelector("tbody");
-		const allRows = Array.from(tbody.rows); // Store all rows
-		let filteredRows = [...allRows]; // Copy of rows for searching
-		const totalPages = () => Math.ceil(filteredRows.length / rowsPerPage);
+		const allRows = Array.from(tbody.rows);
+		let filteredRows = [...allRows];
+
+		function totalPages() {
+			return Math.ceil(filteredRows.length / rowsPerPage);
+		}
 
 		function showPage(page) {
 			tbody.innerHTML = "";
@@ -390,17 +393,6 @@
 			document.getElementById("prevPage").disabled = page === 1;
 			document.getElementById("nextPage").disabled = page === totalPages();
 		}
-
-		function searchEmployee() {
-			const searchInput = document.getElementById("searchInput").value.toLowerCase();
-			filteredRows = allRows.filter(row => {
-				return Array.from(row.cells).some(cell => cell.innerText.toLowerCase().includes(searchInput));
-			});
-			currentPage = 1; // Reset to first page on new search
-			showPage(currentPage);
-		}
-
-		document.getElementById("searchInput").addEventListener("keyup", searchEmployee);
 
 		document.getElementById("prevPage").addEventListener("click", function () {
 			if (currentPage > 1) {
@@ -419,6 +411,7 @@
 		showPage(currentPage);
 	});
 </script>
+
 <script>
 
 	document.addEventListener("DOMContentLoaded", function () {
